@@ -25,6 +25,10 @@ let state;
 // object
 
 /*to check variable data type use typeof function*/
+//Syntax:
+console.log(typeof null);
+//OR
+console.log(typeof(null));
 
 
 /*Interview Question*/
