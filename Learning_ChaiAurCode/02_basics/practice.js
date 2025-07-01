@@ -51,3 +51,4 @@ console.log(obj[mySymbol]);  //output: Ali Hassan
 console.log(obj);
 
 
+//console.log('hello');
