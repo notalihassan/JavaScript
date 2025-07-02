@@ -50,5 +50,3 @@ console.log(obj.age);         //output: 18
 console.log(obj[mySymbol]);  //output: Ali Hassan
 console.log(obj);
 
-
-//console.log('hello');
