@@ -75,6 +75,24 @@ console.log(instructor);
 // }
 
 
+/*Mine Example*/
+
+const myCourse = {
+    courseName: "JS in Urdu",
+    price: 999
+}
+
+console.log(myCourse.price);
+//OR
+const {price} = myCourse;
+console.log(price);
+
+//OR 
+const {price : P} = myCourse;
+console.log(P);
+
+/*   */
+
 [
     {},
     {},

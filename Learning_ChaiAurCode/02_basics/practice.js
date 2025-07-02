@@ -50,3 +50,17 @@ console.log(obj.age);         //output: 18
 console.log(obj[mySymbol]);  //output: Ali Hassan
 console.log(obj);
 
+const myCourse = {
+    courseName: "JS in Urdu",
+    price: 999
+}
+
+console.log(myCourse.price);
+//OR
+const {price} = myCourse;
+console.log(price);
+
+//OR 
+const {price : P} = myCourse;
+console.log(P);
+
