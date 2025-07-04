@@ -52,3 +52,20 @@ function subNum(num1, num2) {
 //now it gives the actual result
 console.log("Result = ", subNum(9,2));    //outpur: 9-2 = 7
 
+
+/*UserloginSystem*/
+
+function userLoggedIn(username) {
+
+    if(username === undefined){               //OR if(!username){}  same meanings
+        console.log("Please enter username!");
+        return
+    }
+    else{
+        return `${username} just logged in`;
+    }
+    
+}
+
+console.log(userLoggedIn());   //undefined bcz humne koi bhi argument pass nhi kia
+console.log(userLoggedIn("Ali_Hassan"));  
