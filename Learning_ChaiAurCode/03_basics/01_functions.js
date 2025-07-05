@@ -68,3 +68,24 @@ function returnSecondValue(getArray){
 
 // console.log(returnSecondValue(myNewArray));
 console.log(returnSecondValue([200, 400, 500, 1000]));
+
+
+/*================================Notes===================================*/
+
+function calculateCartPrice(num){
+    return num;
+}
+
+console.log(calculateCartPrice(12));  //output: 12
+console.log(calculateCartPrice(12,54,23)); //output: 12 bcz we give only one parameter in the function
+
+function calculateCartPrice(val1, val2, ...num1){
+    return num1
+}
+
+// console.log(calculateCartPrice(200, 400, 500, 2000))   //output: 500,2000
+
+/*
+… is the rest operator. 
+jub hmain nhi pta ho ka cart me user kitni value add kre ga to hum iska use krte hn isse hum multiple values ko le skte hn.
+*/
