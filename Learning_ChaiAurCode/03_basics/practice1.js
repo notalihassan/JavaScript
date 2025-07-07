@@ -79,5 +79,5 @@ function calculateCartPrice(num){
 console.log(calculateCartPrice(12));  //output: 12
 console.log(calculateCartPrice(12,54,23)); //output: 12 bcz we give only one parameter in the function
 
-
+console.log("hello");
 
