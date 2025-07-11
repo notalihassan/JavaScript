@@ -36,7 +36,7 @@ function one(){
 one();
 
 /* Note: Nested function mein child function parent 
-function ke variables ko access kr pate hein.(also called clousure) */
+function ke variables ko access kr pate hein. (also called clousure) */
 
 if(true){
     const website = " Youtube";
