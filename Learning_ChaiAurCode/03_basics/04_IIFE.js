@@ -1,10 +1,10 @@
 /* Immediate Invoked Function Expressions (IIFE) */
 
-//Interview Question
 /*
+======Interview Question======
 global scope ke pollution se jo problem hoti ha, tu us global scope k jo variables hn yh koi 
 bhhi declaration ha us pollution ko hatane k liay humne IIFE ka use kia
- */
+*/
 
 /* 
 Q1. 2 IIFE ko aik sth kese likhe ge neche given ha. but masla yh ata ha k phle IIFE me ; last me lagana prta 
