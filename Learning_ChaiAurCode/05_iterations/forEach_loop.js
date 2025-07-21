@@ -89,3 +89,5 @@ console.log("=====================================");   //used for spacing
 myCodeing.forEach( (stdData,index) => {    //(any name you want)
     console.log(index,stdData.name,stdData.age);
 })
+
+
