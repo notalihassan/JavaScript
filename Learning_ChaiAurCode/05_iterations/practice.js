@@ -34,3 +34,18 @@ const newNum2 = myNum.filter( (num) => {
 })
 
 console.log(newNum2);
+
+console.log("=====================================");   //used for spacing
+//using forEach loop
+
+const newNum3 = []
+
+myNum.forEach( (num) => {
+    if(num > 4){
+        newNum3.push(num)
+    }
+})
+console.log(newNum3);
+
+
+
