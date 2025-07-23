@@ -17,7 +17,7 @@ console.log("=====================================");   //used for spacing
 - return value
 - filter me bhi call back function use hota ha 
 - too much use and implementation in js
-- jb hum scope {} use krein ge filter me to return keyword use krna pre ga 
+- jb hum scope {} use krein ge filter me to return keyword use krna (zarori ha) pre ga 
 
 */ 
 const myNum = [1,2,3,4,5,6,7,8,9,10];
