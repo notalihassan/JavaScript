@@ -27,6 +27,7 @@ Events in browser are too much importannt for Interview Questions
 
 
 // CSS:-
+-------
 
 const title = document.getElementById('title')
 
@@ -39,6 +40,7 @@ const title = document.getElementById('title')
 
 
 // get content:-
+--------------
 
 - title.innerHTML  (innerHTML mein hamain inner HTML likhi ho gi like (<span>Hello World!</span>) to voh pora text k sth HTML bhi show kre ga)
 Learing DOM || Chai Aur Code
@@ -47,7 +49,9 @@ Learing DOM || Chai Aur Code   ( agr humne css me kisi span(any text) ko display
 - title.innerText
 Learing DOM || Chai Aur Code
 
-// Querry Selctors:-
+
+// Querry Selctors:-  (gives only single value)
+------------------
 
 - document.querySelector('h2')  (gives first h2 not all)
 <h2 id="heading2" >Lorem ipsum dolor sit amet.1</h2>
@@ -63,4 +67,54 @@ Learing DOM || Chai Aur Code
 
 - document.querrySelector('p:first-child')   //css querrys used here so learn aabout it
 
--
+- color.style.backgroundColor = "purple"
+'purple'
+
+
+// Querry Selctors:-  (gives all value)
+-------------------
+
+- document.querySelectorAll('ul')
+NodeList [ul]
+
+=> NodeList is not a pure array(array jesa ha). (bcz isme only forEach ha map given nhi ha)
+
+-  const myColor = document.querySelectorAll('ul')
+
+myColor[0].style.backgroundColor = "yellow"
+'yellow'
+
+- NodeList me forEach use krna ha kion ke NodeList me map nhi ha.
+
+- Agr NodeList pr Map() use krna ha to usse convert krna pre ga Array me.
+
+
+// getElementByClassName:-
+-------------------------
+
+- isme hmain HTMLCollection milta ha. 
+- agr hamin is pr map() use krna ha to same isse bhi convert krna ho ga Array me.
+
+=> How to Covert HTMLCollection to Array?
+-----------------------------------------
+
+- const myClass = document.getElementsByClassName('class-items')
+  HTMLCollection(3) [li.class-items, li.class-items, li.class-items]
+
+- Array.from(myClass)   /* conversion */
+(3) [li.class-items, li.class-items, li.class-items]
+
+- const myConvertedArray = Array.from(myClass)
+(3) [li.class-items, li.class-items, li.class-items]
+
+- myConvertedArray.forEach( (li) => {
+    li.style.color = "pink"
+} )  
+
+=> so it works 
+
+
+
+
+
+
