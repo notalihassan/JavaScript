@@ -114,6 +114,12 @@ myColor[0].style.backgroundColor = "yellow"
 => so it works 
 
 
+================ 02_dom ================
+
+
+
+console.log(parent.children);   //gives HTMLCollection
+
 
 
 
