@@ -118,7 +118,7 @@ myColor[0].style.backgroundColor = "yellow"
 
 ================ 02_dom ================
 ----------------------------------------
-
+<script>
 
 console.log(parent.children);   //gives HTMLCollection
 
@@ -145,9 +145,33 @@ console.log("=======================================");
 //NodeList (childNodes is too much used in React)
     console.log("NODES: ", parent.childNodes);  //gives NodeList
 
+</script>
+
 
 ================ 03_dom ================
 ----------------------------------------
 
+/* How to Create New Elemnts and Append them in the HTML body? */
 
+<script>
+    const div = document.createElement('div')  //everything you want like h1,h2,div,p, etc.
+    console.log(div);
+    div.className = "main"  //assigning class to div
+    div.id = "mainId"   //assigning id to div
+
+    div.id = Math.round(Math.random() * 10 + 1)
+    
+    div.innerText = "Hello it's me Ali Hassan"
+    
+    div.setAttribute("title", "GENERATED Title")
+
+    div.style.backgroundColor = "purple"
+    div.style.color = "White"
+
+    //Ab yh sb koch hamain console pr to show ho rha ha but HTML page pr nhi ho rha to uske liay 
+    // hmain isse attach(append) krna pre ga document k sth
+
+    document.body.appendChild(div)
+
+</script>
 
