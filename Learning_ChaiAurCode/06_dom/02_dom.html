@@ -29,6 +29,32 @@
         console.log(parent.children[i]);
     }
     
+    parent.children[1].style.color = "yellow"
+    console.log("=======================================");
+
+    //Parent to Child
+    console.log(parent.firstElementChild);
+    console.log(parent.lastElementChild);
+    console.log("=======================================");
+
+    //Child to Parent
+    const dayOne = document.querySelector('.day')
+    console.log(dayOne);
+    console.log(dayOne.parentElement);    
+    console.log(dayOne.nextElementSibling);
+
+    console.log("=======================================");
+    
+    //NodeList (childNodes is too much used in React)
+    console.log("NODES: ", parent.childNodes);  //gives NodeList
+    
+    
+    
+    
+    
+
+    
+
     
     
     

@@ -8,11 +8,13 @@ Events in browser are too much importannt for Interview Questions
 
 
 ================ 01_dom ================
+----------------------------------------
 
 1. document(window)    //shows all things 
 2. document.getElementById('firstHeading').innerHTML = "<h1>Ali Hassan</h1>"
 
 ================ 01(vid=32)_dom ================
+------------------------------------------------
 
 /* Good video watch again if any problem */
 
@@ -115,12 +117,37 @@ myColor[0].style.backgroundColor = "yellow"
 
 
 ================ 02_dom ================
-
+----------------------------------------
 
 
 console.log(parent.children);   //gives HTMLCollection
 
+for(let i = 0; i < parent.children.length; i++){
+        console.log(parent.children[i]);
+    }
+   
+parent.children[1].style.color = "yellow"
+console.log("=======================================");
 
+//Parent to Child
+    console.log(parent.firstElementChild);
+    console.log(parent.lastElementChild);
+    console.log("=======================================");
+
+//Child to Parent
+    const dayOne = document.querySelector('.day')
+    console.log(dayOne);
+    console.log(dayOne.parentElement);    
+    console.log(dayOne.nextElementSibling);
+
+  console.log("=======================================");
+    
+//NodeList (childNodes is too much used in React)
+    console.log("NODES: ", parent.childNodes);  //gives NodeList
+
+
+================ 03_dom ================
+----------------------------------------
 
 
 
