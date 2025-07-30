@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 DOM</title>
+</head>
+<body style="background-color: black; color: white;">
+    <h1 style="color: yellow;">
+        How to add new list in the unlist creating new element and using function?
+    </h1>
+
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+    <script>
+
+        function addLang(langName){
+            const newList = document.createElement('li')
+            newList.innerHTML = `${langName}`
+            document.querySelector('.language').
+            appendChild(newList)
+        }
+
+        addLang("Python");
+        addLang("C++");
+
+        /* Ab is way se agr hum function bna kr usme lanuage add krwate hn to isse bht travel/triverse
+        krna prta ha. pora tree se triverse krna prta ha. 
+        
+        Isliay hum aik good way ko use krein gein jo given below ha:*/
+
+        
+    </script>
+</html>
