@@ -31,6 +31,38 @@
         
         Isliay hum aik good way ko use krein gein jo given below ha:*/
 
-        
+        function addOptimizedLang(langName){
+            const langList = document.createElement('li');                //create 
+            langList.appendChild(document.createTextNode(langName));      //add text
+            document.querySelector('.language').appendChild(langList)     //append
+        }
+
+        addOptimizedLang("PHP");
+
+        //EDIT 1
+
+        const secondlang = document.querySelector('li:nth-child(2)');
+        const newLi = document.createElement('li')
+        newLi.appendChild(document.createTextNode("django"))
+        secondlang.replaceWith(newLi)
+
+        //EDIT 1.2
+
+        // const firstLang = document.querySelector('li:nth-child(1)')
+        //OR        
+        const firstLang = document.querySelector('li:first-child')
+        const newList = document.createElement('li')
+        newList.appendChild(document.createTextNode("TypeScript"))
+        firstLang.replaceWith(newList)
+
+        //EDIT 2
+
+        const thirdLang = document.querySelector('li:nth-child(3)')
+        thirdLang.outerHTML = '<li>goLang</li>';
+
+        //Remove 
+
+        const lastLang = document.querySelector('li:last-child')
+        lastLang.remove();
     </script>
 </html>

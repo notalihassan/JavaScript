@@ -173,5 +173,11 @@ console.log("=======================================");
 
     document.body.appendChild(div)
 
+================ 04_dom ================
+----------------------------------------
+
+- learn about how to create, edit and remove elemnts in dom!
+- learn the file clearly
+
 </script>
 
