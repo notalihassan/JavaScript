@@ -1,14 +1,5 @@
 let randomNum = parseInt(Math.random()*100+1)  //to get 0-100 value
 
-// const form = document.querySelector('form')
-// const numGuess = document.querySelector('#guess')
-// const userInput = document.querySelector('#guessField')
-// const submit = document.querySelector('#subt')
-// const guessSlot = document.querySelector('.guesses')
-// const remaining = document.querySelector('.lastResult')
-// const lowOrHi = document.querySelector('.lowOrHi')
-// const startOver = document.querySelector('.resultParas')
-
 const submit = document.querySelector('#subt');
 const userInput = document.querySelector('#guessField');
 const guessSlot = document.querySelector('.guesses');
