@@ -1,4 +1,4 @@
-const randomNum = parseInt(Math.random()*100+1)  //to get 0-100 value
+let randomNum = parseInt(Math.random()*100+1)  //to get 0-100 value
 
 // const form = document.querySelector('form')
 // const numGuess = document.querySelector('#guess')
@@ -20,7 +20,7 @@ const startOver = document.querySelector('.resultParas');
 const p = document.createElement('p')
 
 let prevGuess = []
-let numGuess = 1
+let numGuess = 0;
 
 let playGame = true 
 
@@ -43,7 +43,7 @@ function validateNum(guess){
         alert("Please enter a number between 1-100")
     }else{
         prevGuess.push(guess)
-        if(prevGuess === 11){
+        if(prevGuess.length == 10){
             displayGuess(guess)
             displayMessage(`Game Over! Guess number was ${randomNum}`)
             endGame();
@@ -72,7 +72,7 @@ function displayGuess(guess){
     userInput.value = ''
     guessSlot.innerHTML += `${guess}  `  //dislpay guesses
     numGuess++;     //increment for guess number 1-10
-    remaining.innerHTML = `${11 - numGuess}`   //remaining guesses 
+    remaining.innerHTML = `${10 - numGuess}`   //remaining guesses 
 }
 
 function displayMessage(message){
@@ -81,11 +81,31 @@ function displayMessage(message){
 }
 
 function endGame(){
+    //
+    userInput.value = '';
+    userInput.setAttribute('disabled', ''); //value key pair ha isliay ('', '')use krna prta ha
+    p.classList.add('button');
+    p.innerHTML = `<button type="button" id="newGame" >Start new Game!</button>`;
+    startOver.appendChild(p);
+    playGame = false;
+    newGame();
 
 }
 
 function newGame(){
+    const newGameButton = document.querySelector('#newGame');
+    newGameButton.addEventListener('click', (evnt) => {
 
+        randomNum = parseInt(Math.random() * 100 + 1);
+        prevGuess = [];
+        numGuess = 0;
+        guessSlot.innerHTML = '';
+        remaining.innerHTML = `${10 - numGuess} `;
+        userInput.removeAttribute('disabled');
+        startOver.removeChild(p);
+
+        playGame = true;
+    })
 }
 
 
