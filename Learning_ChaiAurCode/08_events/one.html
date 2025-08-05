@@ -31,7 +31,7 @@
 
     document.getElementById('owl').addEventListener('click', function(evnt){
         alert('owl clicked')
-    })    //goood approch
+    }, false)    //goood approch
     // jb hum addEventListener use krte hn to isme 3 parameter hote hn '',function,true/false. or 
     // addEventListener mein default me false hi hota ha. so hum likhein yh na likhe voh false hi hoga
 
@@ -39,5 +39,47 @@
         console.log(evnt);
         //gives browser events and environment events
     }) 
+
+
+    //this is bubbling event( small to large )flase
+    document.getElementById('images').addEventListener('click', function(evnt){
+        console.log("clicked inside the ul");
+    }, false)
+    document.getElementById('owl').addEventListener('click', function(evnt){
+        console.log("owl clicked");
+    }, false)
+
+    //this is capturing event( large to small )true
+    document.getElementById('images').addEventListener('click', function(evnt){
+        console.log("clicked inside the ul");
+    }, true)
+    document.getElementById('owl').addEventListener('click', function(evnt){
+        console.log("owl clicked");
+    }, true)
+
+    //Stop propagation
+    document.getElementById('japan').addEventListener('click', function(evnt){
+        console.log("japan clicked");
+        // evnt.stopPropagation();
+    }, false)
+    // bubbling nhi kre ga means upper me shift nhi hoga
+
+    document.getElementById('google').addEventListener('click', function(evnt){
+        console.log(("google clicked"));
+        evnt.preventDefault();        
+    })
+
+
+    //MINI Project: remove images on click
+
+    document.querySelector('#images').addEventListener('click', function(evnt){
+        console.log(evnt.target.tagName)
+        if(evnt.target.tagName === 'IMG'){
+            console.log(evnt.target.id);
+            let removeIMG = evnt.target.parentNode
+            removeIMG.remove();
+        }
+    })
+
 </script>
 </html>
