@@ -1,0 +1,37 @@
+# NOTES:-
+
+``` one.html
+
+=> onclick hum direct image pr bhi lga skte hn but yh good approch nhi ha. jbke react me hum yh krskte hn
+
+=> document.getElementById('owl').onclick = function(){
+        alert('owl clicked')
+}  
+- (yh way bhi acha nhi ha is ki jagah hmain addEventListner ka use krna chaiay kio k usme zyada functionality ha)
+
+=> document.getElementById('owl').addEventListener('click', function(evnt){
+        alert('owl clicked')
+    }. flase)    //goood approch
+- jb hum addEventListener use krte hn to isme 3 parameter hote hn '',function,true/false. or 
+ addEventListener mein default me false hi hota ha. so hum likhein yh na likhe voh false hi hoga
+
+=> document.getElementById('owl').addEventListener('click', function(evnt){
+        console.log(evnt);
+        //gives browser events and environment events
+    }) 
+
+=> Mostly Interview Questions events se poche jate hn
+
+|-> Learn about these Very Important for interview:-
+
+> type, timestamp, defaultPrevented
+> target, toElement, srcElement, currentTarget,
+> clientX, clientY, screenX, screenY
+> altkey, ctrlkey, shiftkey, keyCode
+
+=>
+
+
+
+
+```
