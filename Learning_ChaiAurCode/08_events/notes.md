@@ -65,3 +65,6 @@
 
 ## two.hrml
 
+=> 2 projects of Asynchronos JS 
+
+* The setTimeout() method of the Window interface sets a timer which executes a function or specified piece of code once the timer expires.

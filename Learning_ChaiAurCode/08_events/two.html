@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur Code</title>
+</head>
+<body>
+    <h1>
+        Hello World!
+    </h1>
+    <div id="time"></div>
+    <div id="setInterval"></div>
+    <div id="time2"></div>
+    <button id="stop">
+        stop
+    </button>
+</body>
+    <script>
+        setTimeout( function(){
+            console.log("Ali Hassan");
+        }, 2000)
+
+        const changeHeading = function(){
+            const mytime = new Date();
+            document.querySelector('#time').innerText = mytime.toLocaleTimeString();
+            document.querySelector('h1').innerHTML = `Hello World 2!`
+        }
+
+        setTimeout(changeHeading, 3000)
+
+        // setInterval(function(){
+        //     document.querySelector('#setInterval').innerText = "Hehehe"          
+        // }, 2000)
+
+        const timeInterval = function(){
+            document.querySelector('#setInterval').innerText = "Hehehe" 
+            const mytime = new Date();
+            document.querySelector('#time2').innerText = mytime.toLocaleTimeString();         
+        };
+
+        const interval = setInterval(timeInterval, 1000)
+
+        document.querySelector('#stop').addEventListener('click', function(){
+            clearTimeout(interval)
+            console.log("Stopped");
+        })
+
+        
+
+    </script>
+</html>
