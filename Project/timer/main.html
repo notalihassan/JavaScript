@@ -8,16 +8,24 @@
 <body>
     <h1>Stop Watch</h1>
     <div id="time"></div>
-    <span><button id="Start">Start</button>  <button id="stop">Stop</button></span>
+    <button id="start">Start</button>  
+    <button id="stop">Stop</button>
 
 </body>
     <script>
         const timer = function(){
             const myTime = new Date();
-            // myTime.setHours(0, 0, 0, 0);
             document.querySelector('#time').innerText = myTime.toLocaleTimeString();
         }
 
-        setInterval(timer, 1000);
+        let Interval;
+
+        document.querySelector('#start').addEventListener('click', function(){
+            Interval = setInterval(timer, 1000);
+        })
+
+        document.querySelector('#stop').addEventListener('click', function(){
+            clearInterval(Interval);
+        })
     </script>
 </html>
