@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Stop Watch
+    </h1>
+    <div id="nameAndTime"></div>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+    <script>
+        /* Talk about setInterval */
+
+        // setInterval(function, time, parameter like string)
+
+        // setInterval(function(str){
+        //     console.log(str, Date.now());
+        // }, 1000, "Ali Hassan")
+
+        const sayDate = function(str){
+            console.log(str, Date.now());
+        }
+
+        const interval = setInterval(sayDate, 1000, "Ali Hassan");
+
+        clearInterval(interval);
+
+        /* mini project */
+
+        let Interval;
+
+        const nameTime = function(name){
+           console.log(document.querySelector('#nameAndTime').innerText = name,Date.now());
+        }
+
+        document.querySelector('#start').addEventListener('click', function(){
+            Interval = setInterval(nameTime, 1000, "Ali Hassan");
+        })
+
+        document.querySelector('#stop').addEventListener('click', function(){
+            clearInterval(Interval);
+        })
+
+
+
+
+        
+
+    </script>
+</html>

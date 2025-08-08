@@ -68,3 +68,12 @@
 => 2 projects of Asynchronos JS 
 
 * The setTimeout() method of the Window interface sets a timer which executes a function or specified piece of code once the timer expires.
+
+* To clear or stop setTimeout() use clearTimeout()
+
+## three.html
+
+* setInterval(function, time, parameter like string)
+
+* To clear or stop setInterval() use clearInterval(interval)
+
