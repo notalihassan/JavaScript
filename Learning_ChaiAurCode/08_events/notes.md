@@ -77,3 +77,6 @@
 
 * To clear or stop setInterval() use clearInterval(interval)
 
+## 05_RandomColor on click "Project" in Projects folder
+
+## 06_Keyboard "Project" in project folder
