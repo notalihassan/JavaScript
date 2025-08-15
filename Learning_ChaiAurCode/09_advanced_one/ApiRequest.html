@@ -22,12 +22,15 @@
         XHR.onreadystatechange = function(){
             console.log(XHR.readyState);
             if(XHR.readyState === 4){
-                const response = this.responseText;
-                
-                /*ab me chahta hon k api se data ko show kron jo k object ha but voh data ata string
-                 ki form me ha isliay hum isse parse krein ge JSON me*/
+                const response = JSON.parse(this.responseText);
 
-                console.log(this.responseText);   //this is used for current context
+                /*ab me chahta hon k api se data ko show kron jo k object ha but voh data ata string
+                 ki form me ha(or jub hum usse console krte hn to voh undefined show krta ha )
+                 isliay hum isse parse krein ge JSON me*/
+
+                console.log(typeof response);
+                
+                console.log(response.following);   //this is used for current context
             }
         }
         XHR.send()
