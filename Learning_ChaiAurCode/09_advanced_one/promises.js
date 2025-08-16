@@ -55,7 +55,7 @@ const promiseFourth = new Promise(function(resolve,reject){
         if(!error){
             resolve({username: "Ali", password: 1122})
         }else{
-            console.log("ERROR: Something went wrong!")
+            reject("ERROR: Something went wrong!")
         }
 
     },1000)
@@ -71,3 +71,34 @@ promiseFourth.then(function(user){
 }).finally(function(){         //
     console.log("The promise is either resolved or rejected");
 })
+
+
+/* hum sirf .then .catch k ilawa async (await) ka use bhi kr skte hn */
+/* async : thora sa wait krta ha kam k ho jane ka or agr kam ho jata ha to age execute hota ha wrna
+wahin pr error de deta ha. 
+
+isme yh ha k hum isme catch handle nhi kr skte */
+
+const promiseFive = new Promise(function(resolve, reject){
+
+    setTimeout(function(){
+
+        const error = true;
+        if(!error){
+            resolve({ course: "JS", password: "123" })
+            console.log("async called 5!");
+        }else{
+            reject("ERROR: JS went wrong");
+        }
+
+    },1000)
+})
+
+
+async function consumePromiseFive() {
+    const response = await promiseFive
+    console.log(response);
+    
+}
+
+consumePromiseFive();
