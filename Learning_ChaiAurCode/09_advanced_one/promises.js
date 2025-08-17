@@ -1,5 +1,9 @@
 const promiseOne = new Promise(function(resolve,reject){
 
+    /* 
+       Do an async task
+       DB calls, network, cryptography
+    */
     /* resolve ka .then(function()) k sth connection ha  */
     setTimeout(function(){
         console.log("Async called");
@@ -83,7 +87,7 @@ const promiseFive = new Promise(function(resolve, reject){
 
     setTimeout(function(){
 
-        const error = true;
+        const error = false;
         if(!error){
             resolve({ course: "JS", password: "123" })
             console.log("async called 5!");
@@ -94,11 +98,44 @@ const promiseFive = new Promise(function(resolve, reject){
     },1000)
 })
 
+/*async await ka use krte hoe hum error handlin keliay try catch ka use krte hn! */
 
 async function consumePromiseFive() {
-    const response = await promiseFive
-    console.log(response);
+    try {
+        const response = await promiseFive
+        console.log(response);
     
+    } catch (error) {
+        console.log(error);
+        
+    }
 }
 
 consumePromiseFive();
+
+// async function getAllUsers() {
+//     try {
+//         console.log("jsonplaceholder user api");
+        
+//         const response = await fetch('https://jsonplaceholder.typicode.com/users')
+//         const data = await response.json();   //response.json ko bhi time lgta ha is liay isko bhi await krwana pre ga
+//         console.log(data);
+//     } catch (error) {
+//         console.log("Error: ", error);
+        
+//     }
+    
+// }
+
+// getAllUsers();
+
+/*Now doing this with .then .catch */
+
+fetch('https://jsonplaceholder.typicode.com/users')
+.then(function(response){
+    return response.json()
+}).then(function(data){    //handle the response
+    console.log(data)
+}).catch(function(error){
+    console.log(error);
+})
