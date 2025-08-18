@@ -4,6 +4,7 @@ const promiseOne = new Promise(function(resolve,reject){
        Do an async task
        DB calls, network, cryptography
     */
+   
     /* resolve ka .then(function()) k sth connection ha  */
     setTimeout(function(){
         console.log("Async called");
@@ -139,3 +140,5 @@ fetch('https://jsonplaceholder.typicode.com/users')
 }).catch(function(error){
     console.log(error);
 })
+
+
