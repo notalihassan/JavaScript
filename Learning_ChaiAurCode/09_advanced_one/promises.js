@@ -4,7 +4,7 @@ const promiseOne = new Promise(function(resolve,reject){
        Do an async task
        DB calls, network, cryptography
     */
-   
+
     /* resolve ka .then(function()) k sth connection ha  */
     setTimeout(function(){
         console.log("Async called");
@@ -31,7 +31,7 @@ new Promise(function(resolve, reject){
     console.log("promise 2!");
 })
 
-/*re */
+/* three */
 
 const promiseThree = new Promise(function(resolve,reject){
 
