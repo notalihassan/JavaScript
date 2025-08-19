@@ -72,3 +72,11 @@ A fetch() promise only rejects when a network error is encountered
 (which is usually when there's a permissions issue or similar). A fetch()
 promise does not reject on HTTP errors (404, etc.). Instead, a then ()
 handler must check the Response.ok and/or Response.status properties.
+
+# Micro Task queu OR priority queu OR fetch queu (jo fetch k liay use hoti ha) yh fast OR priority Queu ha as compared to task queu
+
+## jub hum fetch ka use krte hn to voh task sb se phle call stack me jata ha. halan ke task queu me task ho but fetch( priority queu ) ko priority di jati ha.
+## isiliay jo task fetch se hota ha voh sb se phle execute hota ha yh print hota ha
+
+# fetch() vid: no.41
+
