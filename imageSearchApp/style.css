@@ -15,6 +15,9 @@ body{
     flex-direction: column;
     align-items: center;
     margin-block: 40px;
+
+    background: #EEAECA;
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
 }
 
 header{
@@ -46,6 +49,10 @@ header form .search-container .material-symbols-outlined{
     right: 20px;
     bottom: 10px;
     color: #777;
+}
+
+.images-container{
+    margin-block: 50px;
 }
 
 @media screen and (max-width: 920px) {
